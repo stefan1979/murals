@@ -6,7 +6,27 @@ body
 	max-width: 480px
 }
 
-img
+#container 
+{ 
+	display:flex; 
+	flex-direction: column; 
+	text-align:center;
+}
+
+#paneldiv
 {
-  max-width: 100%
+  max-width: 100%;
+  order: 1;
+}
+
+#icondiv
+{
+	order: 2;
+	text-align: right;
+	margin-right: 60px;
+}
+
+#iconimage
+{
+	nax-width: 20%;
 }

@@ -12,6 +12,14 @@
 
 <body>
 
+<script type="text/javascript">
+if (typeof localStorage.muralSeenBitMask != 'undefined' && localStorage.muralSeenBitMask == 63)
+{
+localStorage.muralSeenBitMask = 0; // reset
+window.location = "NWS_outro.html";
+}
+</script> 
+
 <div id="imagewrapper">
 <img src="NWS_header_intro.png" >
 </div>

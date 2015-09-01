@@ -18,7 +18,7 @@
     localStorage.muralSeenBitMask = 0;
   }
 
-  localStorage.muralSeenBitMask = 8; // CHANGE HERE: First three 1, 2 or 4, second three 8, 16, 32
+  localStorage.muralSeenBitMask |= 8; // CHANGE HERE: First three 1, 2 or 4, second three 8, 16, 32
 
   if (localStorage.muralSeenBitMask == 7)
   {

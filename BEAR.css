@@ -3,7 +3,7 @@ body
 
 {
 	background-color: rgb(222,233,222);
-	max-width: 480px
+	margin: 0px;
 }
 
 #container 
@@ -15,7 +15,6 @@ body
 
 #paneldiv
 {
-  max-width: 100%;
   order: 1;
 }
 
@@ -28,5 +27,4 @@ body
 
 #iconimage
 {
-	nax-width: 20%;
 }

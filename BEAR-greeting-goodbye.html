@@ -11,8 +11,8 @@
 </head>
 
 <body>
-
-<div style="box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; width:480px; height:886px; padding-top:753px; padding-left:193px; padding-bottom:0px; padding-right:0px; background-image:url(BEAR-greeting-goodbye.png); text-align:center;">
+<div id="container">
+<div style="box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; width:480px; height:886px; padding-top:753px; padding-left:193px; padding-bottom:0px; padding-right:0px; background-image:url(BEAR-greeting-goodbye.png); text-align:center; margin: 0 auto;">
 	<p id="namePlace" style="font-size:20pt; width: 193px; padding:0px; margin:0px;"></p>
 	<script type="text/javascript">
 		if (typeof localStorage.muralUserName == 'undefined' || localStorage.muralUserName == null || localStorage.muralUserName == '')
@@ -26,6 +26,12 @@
 			localStorage.remove("muralUserName");
 		}
 	</script>
+</div>
+<div id="icondiv">
+<a href="storicodes-end.html">
+<img id="iconimage" src="BEAR-bearcat-icon.png">
+</a>
+</div>
 </div>
 
 </body>

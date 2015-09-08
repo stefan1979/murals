@@ -8,21 +8,25 @@
 	<meta name="viewport" content="width=480px">
 	<title>NWS Intro</title>
 
+	<script type="text/javascript">
+	function onLoad()
+	{
+		if (typeof localStorage.muralSeenBitMask != 'undefined' && localStorage.muralSeenBitMask == 63)
+		{
+			localStorage.muralSeenBitMask = 0; // reset
+			window.location = "NWS_outro.html";
+		}
+		else if (window.location.search=="")
+		{
+			window.location = "?change_to_experience=15ed3dea-36f0-47d6-a635-f282ac926f76";
+		}
+	}
+	</script> 
+
 </head>
 
-<body>
+<body onload="onLoad();">
 
-<script type="text/javascript">
-if (typeof localStorage.muralSeenBitMask != 'undefined' && localStorage.muralSeenBitMask == 63)
-{
-	localStorage.muralSeenBitMask = 0; // reset
-	window.location = "NWS_outro.html";
-}
-else if (window.location.search=="")
-{
-	window.location = "?change_to_experience=15ed3dea-36f0-47d6-a635-f282ac926f76";
-}
-</script> 
 
 <div id="imagewrapper">
 <img src="NWS_header_intro.png" >

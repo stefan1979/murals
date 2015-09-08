@@ -13,17 +13,19 @@
 	{
 		if (typeof localStorage.muralSeenBitMask != 'undefined' && localStorage.muralSeenBitMask == 63)
 		{
+			// show outtro
 			localStorage.muralSeenBitMask = 0; // reset
 			document.getElementById("outro").style.display = "block";
 		}
-		else if (window.location.search=="")
+		else 
 		{
-			window.location = "?change_to_experience=15ed3dea-36f0-47d6-a635-f282ac926f76";
+			// show intro
+			if (window.location.search=="")
+			{
+				window.location = "?change_to_experience=15ed3dea-36f0-47d6-a635-f282ac926f76";
+			}
 			document.getElementById("intro").style.display = "block";
-		}
-		else
-		{
-			document.getElementById("intro").style.display = "block";
+			localStorage.muralSeenBitMask = 0;
 		}
 	}
 	</script> 

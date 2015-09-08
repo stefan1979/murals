@@ -14,11 +14,16 @@
 		if (typeof localStorage.muralSeenBitMask != 'undefined' && localStorage.muralSeenBitMask == 63)
 		{
 			localStorage.muralSeenBitMask = 0; // reset
-			window.location = "NWS_outro.html";
+			document.getElementById("outro").style.display = "block";
 		}
 		else if (window.location.search=="")
 		{
 			window.location = "?change_to_experience=15ed3dea-36f0-47d6-a635-f282ac926f76";
+			document.getElementById("intro").style.display = "block";
+		}
+		else
+		{
+			document.getElementById("intro").style.display = "block";
 		}
 	}
 	</script> 
@@ -28,11 +33,11 @@
 <body onload="onLoad();">
 
 
-<div id="imagewrapper">
+<div class="imagewrapper">
 <img src="NWS_header_intro.png" >
 </div>
 
-<div id="textwrapper">
+<div id="intro" class="textwrapper">
 
 <P>&quot;Erm, excuse me?&quot;</P>
 
@@ -87,7 +92,49 @@ And we'd look after you, wouldn't we, Juan?&quot;</P>
 
 </div>
 
-<div id="imagewrapper">
+<div id="outro" class="textwrapper">
+
+<P>Arthur, Juan and Finestra were each staring at an empty glass.</P>
+
+<P>&quot;I’m afraid Porta went off with my money,&quot; said Finestra.</P>
+
+<P>&quot;Let’s find the loser and give ’im a talking to!&quot; Arthur struggled to his feet. &quot;He can buy the next round!&quot;</P>
+
+<P>Finestra pulled out a baby-pink mobile phone, stabbed at it, then her face fell. &quot;Oh no!&quot; she cried. &quot;He texted me ages ago, saying he was very sorry. He says he’s outside The Bell.&quot;</P>
+
+<P>&quot;We’d better go there then.&quot; said Arthur, leading the way out onto Stoney Street.</P>
+
+<P>As they rounded the corner of the Council House Finestra shrieked with delight. &quot;Look! Fountains!&quot;</P>
+
+<P>She ran across the Square and started to dance with the streams of water, and they danced with her. Some of the braver (or possibly drunker) revellers joined in, and before long there was a huge crowd dancing in and out of each other’s paths, following the twisting and twirling water.</P>
+
+<P>Arthur caught a neon-yellow movement in the corner of his eye, and nudged Juan. </P>
+
+<P>&quot;Look ’ere, the coppers are sticking their noses in. We’d better get Finestra out of there.&quot;</P>
+
+<P>Before they could move, a tall, perfectly-formed man sliced through the onlookers, swept Finestra up in his arms, and swooped back through the gap he had left in the crowd.</P>
+
+<P>Juan shouted, &quot;Hey, you!&quot; and Arthur yelled, &quot;You ain’t kidnapping our Princess!&quot; and they set off in pursuit, leaving chaos behind them as the fountains returned to their usual courses and the police moved in to break up the mob.</P>
+
+<P>They didn’t have far to go. The handsome stranger stopped outside The Bell, and carefully seated Finestra at an empty table.</P>
+
+<P>Finestra looked up at them, her eyes sparkling. &quot;My dearest Juan and Arthur, I should very much like you to meet Prince Porta.&quot;</P>
+
+<P>&quot;Charmed, I’m sure,&quot; said Porta, absently.</P>
+
+<P>Finestra gazed adoringly into his eyes, and he gazed into hers.</P>
+
+<P>Arthur sighed and turned to Juan. &quot;Don’t suppose we’ll be getting drinks out of these two tonight.&quot;</P>
+
+<P>&quot;Never mind, I saw Resnick going into Yates’s. He’s usually good for a pint or two.&quot;
+Finestra didn’t even notice them leave.</P>
+
+<P><B><a href="storicodes-end.html">Next</a></b></P>
+
+</div>
+
+
+<div class="imagewrapper">
 <img src="NWS_footer_intro.png">
 </div>
 

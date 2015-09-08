@@ -16,7 +16,7 @@ function onLoad(){
 
   localStorage.muralSeenBitMask |= 1; // CHANGE HERE: First three 1, 2 or 4, second three 8, 16, 32
 
-  if (localStorage.muralSeenBitMask & 7 == 7 && window.location.search=="")
+  if ((localStorage.muralSeenBitMask & 7 == 7) && window.location.search=="")
   {
     // switch to yellow filter once we have seen 1, 2 & 4
   window.location = "?change_to_experience=5fa76a34-5c2e-4886-9b37-543008b316b7";

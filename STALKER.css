@@ -1,0 +1,61 @@
+
+body 
+
+{
+	background-color: rgb(222,233,222);
+	margin: 0px;
+}
+
+#container 
+{ 
+	display:flex; 
+	flex-direction: column; 
+	text-align:center;
+}
+
+#paneldiv
+{
+  order: 1;
+}
+
+#icondiv
+{
+	order: 2;
+	text-align: right;
+	margin-right: 60px;
+}
+
+ .button {
+        display: inline-block;
+        padding: 3px 5px;
+        border: 1px solid #000;
+        background: #eee;
+        font-family: "Comic Sans", sans-serif;
+        font-style: italic;
+    }
+
+#iconimage
+{
+}
+
+a:link {
+    color: #000000;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #000000;
+    text-decoration: none;
+}
+
+
+a:hover {
+    color: #000000;
+    text-decoration: none;
+}
+
+
+a:active {
+    color: #000000;
+    text-decoration: none;
+}

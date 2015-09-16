@@ -19,15 +19,25 @@ function onLoad(){
   if ((localStorage.muralSeenBitMask & 7) == 7 && window.location.search=="")
   {
     // switch to yellow filter once we have seen 1, 2 & 4
-  window.location = "?change_to_experience=5fa76a34-5c2e-4886-9b37-543008b316b7";
+  redirect("?change_to_experience=5fa76a34-5c2e-4886-9b37-543008b316b7");
   }
 
   if (localStorage.muralSeenBitMask>>3 == 7 && window.location.search=="")
   {
      // switch back to red filter once we have seen 8, 16 & 32
-     window.location = "?change_to_experience=55a4bbf4-0327-426b-b554-8fb064663b8a";
+     redirect("?change_to_experience=55a4bbf4-0327-426b-b554-8fb064663b8a");
   }
 }
+    function redirect(url) {
+		if(navigator.userAgent.match(/Android/i))
+		{
+			injectedRedirect.go(url);
+		}
+		else
+		{
+			window.location = url;
+		}
+	}
 </script>
 </head>
 

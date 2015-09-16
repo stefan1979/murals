@@ -22,10 +22,20 @@
 			// show intro
 			if (window.location.search=="")
 			{
-				window.location = "?change_to_experience=15ed3dea-36f0-47d6-a635-f282ac926f76";
+				redirect("?change_to_experience=15ed3dea-36f0-47d6-a635-f282ac926f76");
 			}
 			document.getElementById("intro").style.display = "block";
 			localStorage.muralSeenBitMask = 0;
+		}
+	}
+    function redirect(url) {
+		if(navigator.userAgent.match(/Android/i))
+		{
+			injectedRedirect.go(url);
+		}
+		else
+		{
+			window.location = url;
 		}
 	}
 	</script> 

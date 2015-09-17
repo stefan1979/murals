@@ -16,6 +16,16 @@ function onLoad(){
 
   localStorage.muralSeenBitMask |= 4; // CHANGE HERE: First three 1, 2 or 4, second three 8, 16, 32
 
+  // show instruction text
+  if ((localStorage.muralSeenBitMask & 7) == 7)
+  {
+  	document.getElementById("instructionsForYellowFilter").style.display = "inline-block";
+  }
+  else
+  {
+    document.getElementById("instructionsForRedFilter").style.display = "inline-block";
+  }
+  
   if ((localStorage.muralSeenBitMask & 7) == 7 && window.location.search=="")
   {
     // switch to yellow filter once we have seen 1, 2 & 4
@@ -79,7 +89,8 @@ function onLoad(){
 
 <P>&quot;And please don’t quarrel on my account. You’re both such lovely men.&quot;</P>
 
-<P><a href="?go_to_camera">Back to scanner</a></P>
+<P><a href="?go_to_camera"><span id="instructionsForRedFilter" style="display:none;">Back to scanner</span><span id="instructionsForYellowFilter" style="display:none;">Now scan the pairs again!</span></a></P>
+
 
 </div>
 

@@ -7,31 +7,35 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="width=480">
 	<title>BEARCAT</title>
-
+	<link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two' rel='stylesheet' type='text/css'>
+	<style type="text/css">
+		#content-image {box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; width:480px; height:886px;padding-top: 748px;padding-left: 72px;padding-bottom: 38px;padding-right: 73px; background-image:url(BEAR-greeting-goodbye.png); text-align:center; margin: 0 auto;}
+		#text-cover {font-family: 'Shadows Into Light Two', cursive; font-size:20pt; padding:0px; margin:0px;background-color: #C9DEDB;height: 100%;}
+	</style>
 </head>
 
 <body>
 <div id="container">
-<div style="box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; width:480px; height:886px; padding-top:753px; padding-left:193px; padding-bottom:0px; padding-right:0px; background-image:url(BEAR-greeting-goodbye.png); text-align:center; margin: 0 auto;">
-	<p id="namePlace" style="font-size:20pt; width: 193px; padding:0px; margin:0px;"></p>
-	<script type="text/javascript">
-		if (typeof localStorage.muralUserName == 'undefined' || localStorage.muralUserName == null || localStorage.muralUserName == '')
-		{
-			//document.getElementById("namePlace").appendChild(document.createTextNode("Thank you!"));
-		}
-		else
-		{
-			document.getElementById("namePlace").appendChild(document.createTextNode(localStorage.muralUserName));
-			localStorage.muralUserName = '';
-			localStorage.remove("muralUserName");
-		}
-	</script>
-</div>
-<div id="icondiv">
-<a href="storicodes-end.html">
-<img id="iconimage" src="BEAR-bearcat-icon.png">
-</a>
-</div>
+	<div id="content-image">
+		<p id="text-cover">Thank you <span id="namePlace"></span> for helping me today!</p>
+		<script type="text/javascript">
+			if (typeof localStorage.muralUserName == 'undefined' || localStorage.muralUserName == null || localStorage.muralUserName == '')
+			{
+				//document.getElementById("namePlace").appendChild(document.createTextNode("Thank you!"));
+			}
+			else
+			{
+				document.getElementById("namePlace").appendChild(document.createTextNode(localStorage.muralUserName));
+				localStorage.muralUserName = '';
+				localStorage.remove("muralUserName");
+			}
+		</script>
+	</div>
+	<div id="icondiv">
+		<a href="storicodes-end.html">
+			<img id="iconimage" src="BEAR-bearcat-icon.png">
+		</a>
+	</div>
 </div>
 
 </body>

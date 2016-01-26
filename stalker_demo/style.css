@@ -130,6 +130,7 @@ div.footer a {
 }
 .radio .next-link {top: -188px;}
 .dome  .next-link {top:    3px;}
+.end   .next-link {position: initial;}
 
 .footer-image {
 	position: fixed;

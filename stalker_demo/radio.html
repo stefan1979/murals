@@ -41,7 +41,7 @@
 		
 		function onLoad(){
 			setupFloat();
-			document.getElementById('content').className = "initial";
+			document.getElementById('content-wrapper').className = "initial";
 			hideLoading();
 			setTimeout(deleteLoading, 1000);
 			setTimeout(showDialog, 1000);
@@ -63,6 +63,8 @@
 <body onload="onLoad()" class="radio">
 	<div id="loading-screen" style="box-sizing: border-box; background-color: black; color: white; font: 26pt sans-serif; position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; z-index: 10000; text-align: center; padding-top: 100px;">Loading, please wait...</div>
 	<div class="bg"></div>
+	<div id="content-wrapper">
+	<div id="before-content"></div>
 	<div id="content">
 		<div id="float1"></div>
 		<div id="float2"></div>
@@ -81,18 +83,10 @@
 			<a id="make-normal-size" onclick="makeNormalFontSize();">Aa</a><a id="make-large-size" onclick="makeLargeFontSize();">Aa</a>
 		</div>
 	</div>
+	<a class="next-link" href="?go_to_camera" class="button">Scan the map again</a>
+	</div>
 
-	<div class="footer">
-		<div>
-			<img src="radio_tower_256.png" />
-		</div>
-	</div>
-	
-	<div class="footer">
-		<div>
-			<a href="?go_to_camera" class="button">Scan the map again</a>
-		</div>
-	</div>
+	<img class="footer-image" src="radio_tower_256.png" />
 
 </body>
 

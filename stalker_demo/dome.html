@@ -23,7 +23,7 @@
 		function showDialog2() {
 			var ele = document.getElementById(showDialog_id+showDialog_n++);
 			if (ele!=null) {
-			ele.style.zIndex = 50-showDialog_n;
+				ele.style.zIndex = 50-showDialog_n;
 				ele.classList.add("final");
 				ele.classList.remove("initial");
 				setTimeout(showDialog2, showDialog_time[showDialog_n-1]);
@@ -143,6 +143,7 @@
 			<div class="guard-1 guard-name">Guard 1</div>
 			<div class="guard-1 message">Could have sworn ...come on the next location is the 				BLUE AND BLACK DULU MOUNTAINS...</div>
 		</div>
+		<a id="message21" class="next-link initial" href="final.html" class="button">Continue >></a>
 		<!-- <div class="mission initial" id="message21">You should now have the first number of the safe code, and you need to get the vital information you have found to SERA.<br/>Scan the BLUE and BLACK DULU MOUNTAINS</div> -->
 	</div>
 	
@@ -152,17 +153,7 @@
 		</div>
 	</div>
 
-	<div class="footer">
-		<div>
-			<img src="mountain_only.png" />
-		</div>
-	</div>
-	
-	<div class="footer">
-		<div>
-			<a href="final.html" class="button">Continue >></a>
-		</div>
-	</div>
+	<img class="footer-image" src="mountain_only.png" />
 
 </body>
 

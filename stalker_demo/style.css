@@ -126,7 +126,7 @@ div.footer a {
 	text-decoration: none;
 	position: relative;
 	left: 34px;
-	z-index: 10001;
+	z-index: 100000;
 }
 .radio .next-link {top: -188px;}
 .dome  .next-link {top:    3px;}

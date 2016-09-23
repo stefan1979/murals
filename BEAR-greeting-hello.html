@@ -7,13 +7,26 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="width=480">
 	<title>BEARCAT</title>
+	
+	<script type="text/javascript">
+		function setName() {
+			var name = document.getElementById('muralUserNameTextBox').value; 
+			if (name == "index") {
+				window.location = 'bearcat_index.html'; 
+			} else {
+				localStorage.muralUserName = name;
+				window.location = '?go_to_camera'; 
+			}
+			return false;
+		}
+	</script>
 
 </head>
 
 <body>
 
 <div style="box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; width:480px; height:665px; padding-top:376px; background-image:url(BEAR-greeting-hello.png); text-align:center;">
-	<form onsubmit="localStorage.muralUserName=document.getElementById('muralUserNameTextBox').value; window.location='?go_to_camera'; return false;">
+	<form onsubmit="return setName()">
 		<input style="font-size: 20pt;" id="muralUserNameTextBox" type="text" name="input" value=""/>
 		<br/>
 		<input type="submit" value="Lets go!" style="font-size: 20pt;" />

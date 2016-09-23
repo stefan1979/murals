@@ -12,7 +12,7 @@
 		function setName() {
 			var name = document.getElementById('muralUserNameTextBox').value; 
 			if (name == "index") {
-				window.location = 'bearcat_index.html'; 
+				window.location = 'bearcat_index.html+?'+Math.floor(Math.random() * 10000); 
 			} else {
 				localStorage.muralUserName = name;
 				window.location = '?go_to_camera'; 

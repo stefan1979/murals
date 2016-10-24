@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=480px">
+	<title>Stalker</title>
+	
+	<script type="text/javascript">
+		function showDialog() {
+			var eles = document.getElementsByClassName('initial');
+			for (var i=0; i<eles.length; ++i) {
+				eles[i].className = "final";
+			}
+		}
+		
+		var showDialog_id = null;
+		var showDialog_n = 0;
+		var showDialog_timeStep = 0;
+		var showDialog_time = [700, 900, 700, 500, 100, 500, 500, 500, 900, 500, 500, 500, 2000, 500, 500, 500, 500, 500, 500, 500];
+		function showDialog2() {
+			var ele = document.getElementById(showDialog_id+showDialog_n++);
+			if (ele!=null) {
+				ele.style.zIndex = 50-showDialog_n;
+				ele.classList.add("final");
+				ele.classList.remove("initial");
+				setTimeout(showDialog2, showDialog_time[showDialog_n-1]);
+			}
+		}
+		
+		function hideLoading() {
+			document.getElementById('loading-screen').className = "fade-out";
+		}
+		function deleteLoading() {
+			document.getElementById('loading-screen').remove();
+		}
+		function onLoad(){
+			hideLoading();
+			setTimeout(deleteLoading, 1000);
+			showDialog_id = "message";
+			showDialog_timeStep = 900;
+			setTimeout(showDialog2, 1000);
+		}
+		
+		function makeNormalFontSize() {
+			var e = document.body;
+			e.classList.remove('large-size');
+		}
+		function makeLargeFontSize() {
+			var e = document.body;
+			e.classList.add('large-size');
+		}
+	</script>
+</head>
+
+<body onload="onLoad()" class="lab">
+	<div id="loading-screen" style="box-sizing: border-box; background-color: black; color: white; font: 26pt sans-serif; position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; z-index: 10000; text-align: center; padding-top: 100px;">Loading, please wait...</div>
+	<div class="bg"></div>
+	<div id="content" /*class="initial"*/>
+		<div class="message-container guard-3 initial" id="message0">
+			<div class="guard-3 guard-name">Inquisitor</div>
+			<div class="guard-3 message">I’ve been waiting for you Void 7893</div>
+		</div>
+		<div class="message-container guard-1 initial" id="message1">
+			<div class="guard-1 guard-name">Sera</div>
+			<div class="guard-1 message">My name is Sera</div>
+		</div>
+		<div class="message-container guard-3 initial" id="message2">
+			<div class="guard-3 guard-name">Inquisitor</div>
+			<div class="guard-3 message">You have no name </div>
+		</div>
+		<div class="message-container guard-1 initial" id="message3">
+			<div class="guard-1 guard-name">Sera</div>
+			<div class="guard-1 message">My name is Sera!  This is a mistake</div>
+		</div>
+		<div class="message-container guard-3 initial" id="message4">
+			<div class="guard-3 guard-name">Inquisitor</div>
+			<div class="guard-3 message">The sooner you accept your fall from grace the better, so let’s begin.</div>
+		</div>
+		<div class="message-container guard-1 initial" id="message5">
+			<div class="guard-1 guard-name">Sera</div>
+			<div class="guard-1 message">I’m in the wrong place</div>
+		</div>
+		<div class="message-container guard-3 initial" id="message6">
+			<div class="guard-3 guard-name">Inquisitor</div>
+			<div class="guard-3 message">You are in the right place, we both know that</div>
+		</div>
+		<div class="message-container guard-1 initial" id="message7">
+			<div class="guard-1 guard-name">Sera</div>
+			<div class="guard-1 message">Please! I haven’t done anything</div>
+		</div>
+		<div class="message-container guard-3 initial" id="message8">
+			<div class="guard-3 guard-name">Inquisitor</div>
+			<div class="guard-3 message">The Thaken system is a shark, it can smell the tiniest piece of information, once it grabs hold nothing will ever make it let go, until it has everything it wants……………. and it has smelt you Void 7893!</div>
+		</div>
+		<div class="message-container guard-1 initial" id="message9">
+			<div class="guard-1 guard-name">Sera</div>
+			<div class="guard-1 message">I don’t know what you mean</div>
+		</div>
+		<div class="message-container guard-3 initial" id="message10">
+			<div class="guard-3 guard-name">Inquisitor</div>
+			<div class="guard-3 message">How did you know the location of the map? Who is helping you?   You will tell us …  of that there no doubt…..Take her down to the sensory depravation chamber</div>
+		</div>
+		<div class="message-container guard-2 initial" id="message11">
+			<div class="guard-2 guard-name">Guard</div>
+			<div class="guard-2 message">Come on, you’re going to the Meat Grinder</div>
+		</div>
+		<div class="mission initial" id="message12">
+			Mission – Rescue Sera
+			<ul>
+				<li>Text the password code: THE CAT IS IN THE CELLAR to 07515 375383</li>
+				<li>Wait for contact</li>
+				<li>Carry out the instructions you receive</li>
+			</ul>
+		</div>
+		<a class="next-link" href="final.html">Scan the map again</a>
+	</div>
+	
+	<div class="header">
+		<div id="font-size-widget">
+			<a id="make-normal-size" onclick="makeNormalFontSize();">Aa</a><a id="make-large-size" onclick="makeLargeFontSize();">Aa</a>
+		</div>
+	</div>
+
+</body>
+
+</html>

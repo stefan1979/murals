@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=480px">
+	<title>Stalker</title>
+	
+	<script type="text/javascript">
+		function showDialog() {
+			var eles = document.getElementsByClassName('initial');
+			for (var i=0; i<eles.length; ++i) {
+				eles[i].className = "final";
+			}
+		}
+		function hideLoading() {
+			document.getElementById('loading-screen').className = "fade-out";
+		}
+		function deleteLoading() {
+			document.getElementById('loading-screen').remove();
+		}
+		
+		function onLoad(){
+			document.getElementById('content-wrapper').className = "initial";
+			hideLoading();
+			setTimeout(deleteLoading, 1000);
+			setTimeout(showDialog, 1000);
+		}
+		
+		function makeNormalFontSize() {
+			var e = document.body;
+			e.classList.remove('large-size');
+			setupFloat();
+		}
+		function makeLargeFontSize() {
+			var e = document.body;
+			e.classList.add('large-size');
+			setupFloat();
+		}
+	</script>
+</head>
+
+<body onload="onLoad()" class="mountains">
+	<div id="loading-screen" style="box-sizing: border-box; background-color: black; color: white; font: 26pt sans-serif; position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; z-index: 10000; text-align: center; padding-top: 100px;">Loading, please wait...</div>
+	<div class="bg"></div>
+	<div id="content-wrapper">
+	<div id="before-content"></div>
+	<div id="content">
+		<p>Is that you Stalker?....... I thought you had been caught!  Should have known you were smarter than that!</p>
+		<p>The map is in the Mirror Hall? that’s right in the centre of the Thaken City, it’s not easy to get to!</p>
+		<p>The city is at the top of the Dulu mountains, so tonight I am going to climb.  The rock is almost completely smooth, it’s a hazardous ascent, there are few handholds, and they are razor sharp, but there is no choice.  I have a photographic memory, once I have seen the map I will be able to recreate it..... well, that’s the plan anyway.</p>
+		<p>But I need a diversion and this is where you come in.  I need you to block Thaken communications to keep the guards busy.</p>
+		<p>Mission – Disruption of Thaken communication
+			<ul>
+				<li>Travel to the HIDDEN LABORATORY in this building</li>
+				<li>Locate the radio and listen to the instructions</li>
+			</ul>
+Good luck to us both Stalker..... see you on the other side.....</p>
+		
+		<div id="font-size-widget">
+			<a id="make-normal-size" onclick="makeNormalFontSize();">Aa</a><a id="make-large-size" onclick="makeLargeFontSize();">Aa</a>
+		</div>
+	</div>
+	<a class="next-link" href="?go_to_camera">Scan the map again</a>
+	</div>
+
+</body>
+
+</html>

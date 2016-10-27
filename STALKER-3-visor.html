@@ -3,32 +3,157 @@
 <html>
 
 <head>
-	<link rel="stylesheet" type="text/css" href="STALKER.css">
+	<link rel="stylesheet" type="text/css" href="stalker_new/style.css">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="width=480px">
 	<title>Stalker</title>
-
+	
+	<script type="text/javascript">
+		function showDialog() {
+			var eles = document.getElementsByClassName('initial');
+			for (var i=0; i<eles.length; ++i) {
+				eles[i].className = "final";
+			}
+		}
+		
+		var showDialog_id = null;
+		var showDialog_n = 0;
+		var showDialog_timeStep = 0;
+		var showDialog_time = [700, 900, 700, 500, 100, 500, 500, 500, 900, 500, 500, 500, 2000, 500, 500, 500, 500, 500, 500, 500];
+		function showDialog2() {
+			var ele = document.getElementById(showDialog_id+showDialog_n++);
+			if (ele!=null) {
+				ele.style.zIndex = 50-showDialog_n;
+				ele.classList.add("final");
+				ele.classList.remove("initial");
+				setTimeout(showDialog2, showDialog_time[showDialog_n-1]);
+			}
+		}
+		
+		function hideLoading() {
+			document.getElementById('loading-screen').className = "fade-out";
+		}
+		function deleteLoading() {
+			document.getElementById('loading-screen').remove();
+		}
+		function onLoad(){
+			hideLoading();
+			setTimeout(deleteLoading, 1000);
+			showDialog_id = "message";
+			showDialog_timeStep = 900;
+			setTimeout(showDialog2, 1000);
+		}
+		
+		function makeNormalFontSize() {
+			var e = document.body;
+			e.classList.remove('large-size');
+		}
+		function makeLargeFontSize() {
+			var e = document.body;
+			e.classList.add('large-size');
+		}
+	</script>
 </head>
 
-<body onload="onLoad()">
+<body onload="onLoad()" class="dome">
+	<div id="loading-screen" style="box-sizing: border-box; background-color: black; color: white; font: 26pt sans-serif; position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; z-index: 10000; text-align: center; padding-top: 100px;">Loading, please wait...</div>
+	<div class="bg"></div>
+	<div id="content" /*class="initial"*/>
+		<div class="message-container guard-3 initial" id="message0">
+			<div class="guard-3 guard-name">Guard 3</div>
+			<div class="guard-3 message">We only get a 15 minute break?</div>
+		</div>
+		<div class="message-container guard-1 initial" id="message1">
+			<div class="guard-1 guard-name">Guard 1</div>
+			<div class="guard-1 message">Well, we had to check out that old theatre </div>
+		</div>
+		<div class="message-container guard-3 initial" id="message2">
+			<div class="guard-3 guard-name">Guard 3</div>
+			<div class="guard-3 message">What a waste of time! I hate this job</div>
+		</div>
+		<div class="message-container guard-1 initial" id="message3">
+			<div class="guard-1 guard-name">Guard 1</div>
+			<div class="guard-1 message">There are perks ....</div>
+		</div>
+		<div class="message-container guard-3 initial" id="message4">
+			<div class="guard-3 guard-name">Guard 3</div>
+			<div class="guard-3 message">What?</div>
+		</div>
+		<div class="message-container guard-2 initial" id="message5">
+			<div class="guard-2 guard-name">Guard 2</div>
+			<div class="guard-2 message">Biscuits!</div>
+		</div>
+		<div class="message-container guard-3 initial" id="message6">
+			<div class="guard-3 guard-name">Guard 3</div>
+			<div class="guard-3 message">Bourbons.  We only get Bourbons, I hate Bourbons.</div>
+		</div>
+		<div class="message-container guard-1 initial" id="message7">
+			<div class="guard-1 guard-name">Guard 1</div>
+			<div class="guard-1 message">Stop moaning  </div>
+		</div>
+		<div class="message-container guard-3 initial" id="message8">
+			<div class="guard-3 guard-name">Guard 3</div>
+			<div class="guard-3 message">The job’s been getting to me lately. Excessive work 					demands, short breaks, Bourbons.......</div>
+		</div>
+		<div class="message-container guard-1 initial" id="message9">
+			<div class="guard-1 guard-name">Guard 1</div>
+			<div class="guard-1 message">Well, if it’s just the Bourbons...</div>
+		</div>
+		<div class="message-container guard-3 initial" id="message10">
+			<div class="guard-3 guard-name">Guard 3</div>
+			<div class="guard-3 message">It’s not just the Bourbons!</div>
+		</div>
+		<div class="message-container guard-1 initial" id="message11">
+			<div class="guard-1 guard-name">Guard 1</div>
+			<div class="guard-1 message">Keep your hair on!</div>
+		</div>
+		<div class="message-container guard-3 initial" id="message12">
+			<div class="guard-3 guard-name">Guard 3</div>
+			<div class="guard-3 message">It’s all the aggression ... dealing with the riots and such.  Now we have to round up Voids to work in the abandoned mines, more stress....</div>
+		</div>
+		<div class="message-container guard-1 initial" id="message13">
+			<div class="guard-1 guard-name">Guard 1</div>
+			<div class="guard-1 message">I guess so</div>
+		</div>
+		<div class="message-container guard-2 initial" id="message14">
+			<div class="guard-2 guard-name">Guard 2</div>
+			<div class="guard-2 message">Hey, look what I found lying around</div>
+		</div>
+		<div class="message-container guard-1 initial" id="message15">
+			<div class="guard-1 guard-name">Guard 1</div>
+			<div class="guard-1 message">The map of the abandoned mines!</div>
+		</div>
+		<div class="message-container guard-3 initial" id="message16">
+			<div class="guard-3 guard-name">Guard 3</div>
+			<div class="guard-3 message">That should be in the MIRROR HALL safe</div>
+		</div>
+		<div class="message-container guard-2 initial" id="message17">
+			<div class="guard-2 guard-name">Guard 2</div>
+			<div class="guard-2 message">Ahm........ I can never remember the code</div>
+		</div>
+		<div class="message-container guard-1 initial" id="message18">
+			<div class="guard-1 guard-name">Guard 1</div>
+			<div class="guard-1 message">Idiot!   It’s 2 and then ...wait!  what was that?... I heard someone outside...check it out........</div>
+		</div>
+		<div class="message-container guard-3 initial" id="message19">
+			<div class="guard-3 guard-name">Guard 3</div>
+			<div class="guard-3 message">Nothing here.....</div>
+		</div>
+		<div class="message-container guard-1 initial" id="message20">
+			<div class="guard-1 guard-name">Guard 1</div>
+			<div class="guard-1 message">Could have sworn ...come on the next location is the 				BLUE AND BLACK DULU MOUNTAINS...</div>
+		</div>
+		<div class="mission initial" id="message21">You should now have the first number of the safe code, and you need to get the vital information you have found to SERA.<br/>Scan the BLUE and BLACK DULU MOUNTAINS</div>
+		<a class="next-link" href="?go_to_camera">Continue >></a>
+	</div>
+	
+	<div class="header">
+		<div id="font-size-widget">
+			<a id="make-normal-size" onclick="makeNormalFontSize();">Aa</a><a id="make-large-size" onclick="makeLargeFontSize();">Aa</a>
+		</div>
+	</div>
 
-<div id="container">
-<div id="paneldiv">
-
-<img src="STALKER-3.png"/>
-
-</div>
-
-<div id="icondiv">
-
-<a href="?go_to_camera" class="button">
-Scan the map again
-</a>
-
-</div>
-
-</div>
-
+	<img class="footer-image" src="stalker_new/mountain_only.png" />
 
 </body>
 

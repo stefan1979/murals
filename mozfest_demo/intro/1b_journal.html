@@ -3,7 +3,7 @@
 <html>
 
 <head>
-	<link rel="stylesheet" type="text/css" href="stalker_new/style.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="width=480px">
 	<title>Stalker</title>
@@ -39,56 +39,28 @@
 			e.classList.add('large-size');
 			setupFloat();
 		}
-		
 	</script>
-	
-	
-<script type="text/javascript">
-	function changeToExperience(id) {
-		redirect('?change_to_experience='+id);
-	}
-	function goToCamera() {
-		window.location = '?go_to_camera';
-	}
-    function redirect(url) {
-		if(navigator.userAgent.match(/Android/i))
-		{
-			injectedRedirect.go(url);
-		}
-		else
-		{
-			window.location = url;
-		}
-	}
-	
-	function foo () {
-		setTimeout(function () {
-			changeToExperience('a3c7c91c-380b-4641-a72a-a75b787d6cef');
-			setTimeout(function () {
-				redirect("mozfest_demo/intro/1b_journal.html");
-			}, 10);
-		}, 10);
-	}
-		
-</script>
-	
 </head>
 
-<body onload="onLoad()" class="journal-intro">
+<body onload="onLoad()" class="journal">
 	<div id="loading-screen" style="box-sizing: border-box; background-color: black; color: white; font: 26pt sans-serif; position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; z-index: 10000; text-align: center; padding-top: 100px;">Loading, please wait...</div>
 	<div class="bg"></div>
 	<div id="content-wrapper">
 	<div id="before-content"></div>
 	<div id="content">
-		<p>My name is Sera.  I am a prisoner of the Thakens. They call me Void 7893, but my name is SERA!!!  I am free..... I will always be free, whatever they do to me and those I love.</p>
+		<p>We are at war, and war and its companions, death, destruction, famine and misery remain the same wherever you are.</p>
+		<p>It has been a VERY HARD day in the mines, my spirits are low.  Mitry was crushed by a mine cart today. .....he was a good man.....my friend.</p>
+		<p>My fingers are sore, my hand is shaking, but I must keep writing, I must keep a record of what the Thakens are doing to us.  To them we are nothing, worse then nothing, we are just Voids.  We don’t count, except to dig, suffer and die for the last of the minerals they need to make energy....but now they are threatening my own world...  I have to stop them....... .....</p>
+		<p>I need your help. .........please scan the base of the RADIO MAST and we will speak again....... be careful though Thaken Spies are everywhere</p>
 		
 		<div id="font-size-widget">
 			<a id="make-normal-size" onclick="makeNormalFontSize();">Aa</a><a id="make-large-size" onclick="makeLargeFontSize();">Aa</a>
 		</div>
 	</div>
-	<a class="next-link" href="?go_to_camera">Continue, full experience</a>
-	<a class="next-link" href="#" onclick="foo()">Continue, MozFest demo</a>
+	<a class="next-link" href="?go_to_camera">Scan the map again</a>
 	</div>
+
+	<img class="footer-image" src="1/fg2.png" />
 
 </body>
 
